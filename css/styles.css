@@ -110,6 +110,7 @@ textarea {
   border-radius: 15px;
   box-shadow: 0 0 20px 10px #ffffff;
   outline: none;
+  cursor: default;
 }
 
 .text-field--active {
@@ -160,10 +161,16 @@ textarea {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 20px 2px rgba(155, 155, 155, 0.3);
+  outline: none;
 }
 
 .key--active {
   filter: invert(1);
+}
+
+.key:hover {
+  background-color: rgba(155, 155, 155, 0.5);
+  box-shadow: 0 0 5px 2px #ffffff;
 }
 
 .key-backspace {
@@ -194,6 +201,10 @@ textarea {
 
 .key-capslock {
   min-width: 120px;
+}
+
+.key-capslock--active {
+  box-shadow: inset 0 0 10px 2px lightcoral;
 }
 
 .key-enter {
