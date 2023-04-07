@@ -5,7 +5,7 @@ const caps = document.querySelector('.key-capslock');
 
 caps.onclick = () => caps.classList.toggle('key-capslock--active');
 
-const doNothingKeys = ['Tab', 'CapsLock', 'Enter', 'ShiftLeft', 'ShiftRight', 'AltLeft', 'ControlLeft', 'MetaLeft', 'AltRight', 'ControlRight', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft']
+const doNothingKeys = ['Tab', 'CapsLock', 'Enter', 'ShiftLeft', 'ShiftRight', 'AltLeft', 'ControlLeft', 'MetaLeft', 'AltRight', 'ControlRight', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
 
 document.addEventListener('keydown', event => {
   event.preventDefault();
@@ -14,7 +14,7 @@ document.addEventListener('keydown', event => {
   const { key } = event;
 
   if (code === 'CapsLock') {
-    caps.classList.toggle('key-capslock--active')
+    caps.classList.toggle('key-capslock--active');
   }
 
   buttons.forEach(btn => {
@@ -50,11 +50,6 @@ document.addEventListener('keyup', () => {
   buttons.forEach(btn => btn.classList.remove('key--active'));
 })
 
-buttons.forEach(btn => {
-  btn.addEventListener('mousedown', () => btn.classList.add('key--active'));
-  btn.addEventListener('mouseup', () => btn.classList.remove('key--active'));
-})
-
 keyboard.addEventListener('click', event => {
   const { target } = event;
 
@@ -82,4 +77,3 @@ keyboard.addEventListener('click', event => {
     textarea.classList.remove('text-field--active');
   }
 })
-
